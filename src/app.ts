@@ -1,7 +1,5 @@
-//import { hello } from "./hello";
 import * as fs from 'fs';
 
-//console.log(hello());
 let file:string="";
 let totalDayDriveMinutes:number = 12*60;
 let addToTotalMinutes:number = 0;
@@ -27,6 +25,7 @@ fs.readFile(file, 'utf8', function (err, data) {
         return;
       }
     //console.log('File content:', data);
+    //seperate by line
     var array = data.toString().split("\n");
     parseFile(array);
     
