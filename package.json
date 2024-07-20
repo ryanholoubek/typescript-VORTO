@@ -3,20 +3,18 @@
   "version": "1.0.0",
   "main": "./dist/app.js",
   "scripts": {
+    "build": "tsc && cp -R ./src/problems ./dist",
+    "prestart": "npm run build",
+    "start": "node dist/app.js",
+    "clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
-  "scripts": {
-    "build": "tsc",
-    "prestart": "npm run build",
-    "start": "node dist/app.js",
-    "clean": "rm -rf dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-   "devDependencies": {
+  "devDependencies": {
+    "@types/node": "^20.14.11",
     "typescript": "^5.5.3"
   }
 }
